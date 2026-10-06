@@ -28,4 +28,4 @@ Dados e contatos estão em `data/site.ts`. Nome, atuação, localização e CRBM
 
 As 12 fotografias fornecidas foram convertidas para WebP sem retoques. O fundo e a fotografia do hero começam no topo da página, atrás da navegação transparente, sem recuo, faixa ou overlay exclusivo para o nav. No desktop, máscara e gradiente fazem a transição entre texto e fotografia; o rosto mantém as cores naturais. O conteúdo do hero conserva espaço abaixo da navegação, e a composição mobile usa regras próprias. A galeria preserva os originais e suporta comparativos lado a lado e empilhados.
 
-O favicon está em `app/icon.svg`. Nenhuma imagem OG foi criada ou incluída.
+O favicon está em `app/icon.svg`. A imagem OG fornecida pelo solicitante está em `app/opengraph-image.jpg`, otimizada para JPEG de 1200 × 630 px, com a composição integral preservada. O Next.js publica a imagem e seus metadados automaticamente; o texto alternativo está em `app/opengraph-image.alt.txt`.
