@@ -84,5 +84,8 @@
   .header, .header:not(.scrolled), .header.scrolled { height: 86px; padding-inline: 6%; }
   .campaign-portrait { top: 0; }
   .campaign-original { object-position: 50% 0%; }
+  /* Keep the location with the copy so it never crosses the portrait's eyes. */
+  .campaign-topline { margin: auto 0 18px; }
+  .campaign-copy { margin-top: 0; }
   .gallery-heading p { max-width: 30rem; }
 }
