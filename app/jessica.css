@@ -1,0 +1,81 @@
+/* Mauve, wine, rose and warm ivory from the supplied identity reference. */
+.header, .header:not(.scrolled), .header.scrolled {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 104px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  color: #f7f2f0;
+}
+.header .brand-monogram { color: #dfc5c7; font-style: normal; letter-spacing: -.08em; }
+.header .brand-type small { color: #dfc5c7; }
+.header .mobile-menu { background: transparent; backdrop-filter: none; color: #f7f2f0; border-color: #dfc5c755; }
+.campaign { --nav-height: 104px; background: #201b1e; }
+.campaign-portrait { top: var(--nav-height); }
+.campaign-silhouette { overflow: hidden; }
+.campaign-title-line:nth-child(3), .campaign-editorial em { color: #dfc5c7; }
+.campaign-kicker, .campaign-topline, .campaign-metrics, .campaign-signature { color: #dfc5c7; }
+.campaign-topline span:last-child { display: none; }
+.campaign-kicker::before, .campaign-signature > span { background: #dfc5c7; }
+.campaign-subtitle { border-color: #b79099; }
+.campaign-cta { background: #dfc5c7; border-color: #dfc5c7; color: #372a2e; }
+.campaign-cta:hover, .campaign-cta:focus-visible { background: #f0dcdd; }
+.campaign-seal { color: #e8d4d6; }
+.campaign-organic { border-color: #dfc5c73d; }
+.campaign-organic-two { border-color: #dfc5c71f; }
+.campaign-contour { display: none; }
+.essence-editorial { background: #f7f2f0; }
+.essence-values { background: #ece0e1; }
+.essence-value { background: #fbf8f5d9; border-color: #ffffffa8; }
+.essence-value-icon { background: #e3cfd2; color: #68464f; }
+.essence-editorial-description, .essence-value p, .ritual-list p { color: #76666c; }
+.gallery-chapter, .footer, .result-dialog { background: #2c2328; }
+.gallery-photo, .comparison { background: #392c33; }
+.gallery-heading p, .footer-main > div { color: #ded0d4; }
+.gallery-photo { aspect-ratio: 1122 / 1402; }
+.ritual-chapter { background: #f7f2f0; }
+.social-chapter { background: #eadbde; }
+.closing-chapter { background: radial-gradient(circle at 80% 20%, #68464f, #30242b 65%); }
+.menu-dialog { background: #f7f2f0; }
+.viewer-note { color: #dfc5c7; }
+
+/* Desktop blend stays scoped so mobile keeps its own composition. */
+@media (min-width: 701px) {
+  .desktop-nav { display: flex; }
+  .mobile-menu { display: none; }
+  .campaign-portrait {
+    inset: var(--nav-height) 0 0 36%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #0003 9%, #0009 21%, #000e 33%, #000 43%);
+    mask-image: linear-gradient(90deg, transparent 0%, #0003 9%, #0009 21%, #000e 33%, #000 43%);
+  }
+  .campaign-original { object-position: 50% 0%; filter: none; transform: none; }
+  .campaign::before {
+    background: linear-gradient(180deg, #201b1e 104px, #201b1e99 124px, #201b1e30 154px, transparent 184px),
+      linear-gradient(90deg, #201b1e 0%, #201b1ef5 26%, #201b1ece 38%, #201b1e66 49%, #201b1e14 59%, transparent 68%),
+      linear-gradient(0deg, #201b1ec9, transparent 24%);
+  }
+  .campaign::after { background: none; }
+  .campaign-copy { width: 60%; }
+  .campaign-editorial { top: auto; bottom: 255px; }
+  .campaign-seal { bottom: 115px; }
+  .essence-smile { width: 45%; right: 2%; top: 50px; aspect-ratio: 1122 / 1402; border-radius: 46% 46% 4% 46%; }
+  .essence-smile img { object-position: 50% 0%; transform: scale(1.016); }
+  .essence-stage { min-height: 740px; height: min(55vw, 940px); }
+  .essence-editorial-copy { width: 45%; }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .desktop-nav { gap: 15px; font-size: 11px; }
+  .campaign-portrait { left: 34%; }
+  .campaign-copy { width: 66%; }
+  .essence-smile { top: 110px; }
+}
+@media (max-width: 700px) {
+  .header, .header:not(.scrolled), .header.scrolled { height: 86px; padding-inline: 6%; }
+  .campaign { --nav-height: 86px; }
+  .campaign-portrait { top: var(--nav-height); }
+  .campaign-original { object-position: 50% 0%; }
+  .gallery-heading p { max-width: 30rem; }
+}
