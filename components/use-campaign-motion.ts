@@ -52,7 +52,7 @@ export function useCampaignMotion() {
         { transform: 'translateY(0) rotate(0)', opacity: 1 },
       ], 1600, 200, 180);
       animate('.campaign-silhouette', [
-        { opacity: 0, transform: 'translateY(48px) scale(1.055)' },
+        { opacity: 0, transform: 'scale(1.055)' },
         { opacity: 1, transform: 'translateY(0) scale(1)' },
       ], 2400, 300);
       animate('.campaign-subtitle', rise, 1300, 850);
@@ -95,8 +95,8 @@ export function useCampaignMotion() {
         progress += (targetProgress - progress) * .12;
         x += (pointerX - x) * .075;
         y += (pointerY - y) * .075;
-        // Keep the photograph below the nav at every animation frame.
-        portrait.style.translate = innerWidth <= 700 ? `0 ${progress * 28}px` : '0 0';
+        // Keep the hero photograph continuous behind the transparent nav.
+        portrait.style.translate = '0 0';
         firstShape.style.translate = `${x * -12}px ${progress * -38}px`;
         secondShape.style.translate = `${x * 14}px ${progress * -65}px`;
         seal.style.translate = `0 ${progress * -22}px`;

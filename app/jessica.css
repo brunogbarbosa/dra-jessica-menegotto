@@ -7,14 +7,22 @@
   border: 0;
   background: transparent;
   box-shadow: none;
+  -webkit-backdrop-filter: none;
   backdrop-filter: none;
   color: #f7f2f0;
 }
 .header .brand-monogram { color: #dfc5c7; font-style: normal; letter-spacing: -.08em; }
 .header .brand-type small { color: #dfc5c7; }
-.header .mobile-menu { background: transparent; backdrop-filter: none; color: #f7f2f0; border-color: #dfc5c755; }
-.campaign { --nav-height: 104px; background: #201b1e; }
-.campaign-portrait { top: var(--nav-height); }
+.header .mobile-menu, .header:not(.scrolled) .mobile-menu, .header.scrolled .mobile-menu {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  color: #f7f2f0;
+}
+.campaign { background: #201b1e; }
+.campaign-portrait { top: 0; }
 .campaign-silhouette { overflow: hidden; }
 .campaign-title-line:nth-child(3), .campaign-editorial em { color: #dfc5c7; }
 .campaign-kicker, .campaign-topline, .campaign-metrics, .campaign-signature { color: #dfc5c7; }
@@ -45,16 +53,16 @@
 /* Desktop blend stays scoped so mobile keeps its own composition. */
 @media (min-width: 701px) {
   .desktop-nav { display: flex; }
+  .desktop-nav a { color: #372a2e; }
   .mobile-menu { display: none; }
   .campaign-portrait {
-    inset: var(--nav-height) 0 0 36%;
+    inset: 0 0 0 36%;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, #0003 9%, #0009 21%, #000e 33%, #000 43%);
     mask-image: linear-gradient(90deg, transparent 0%, #0003 9%, #0009 21%, #000e 33%, #000 43%);
   }
   .campaign-original { object-position: 50% 0%; filter: none; transform: none; }
   .campaign::before {
-    background: linear-gradient(180deg, #201b1e 104px, #201b1e99 124px, #201b1e30 154px, transparent 184px),
-      linear-gradient(90deg, #201b1e 0%, #201b1ef5 26%, #201b1ece 38%, #201b1e66 49%, #201b1e14 59%, transparent 68%),
+    background: linear-gradient(90deg, #201b1e 0%, #201b1ef5 26%, #201b1ece 38%, #201b1e66 49%, #201b1e14 59%, transparent 68%),
       linear-gradient(0deg, #201b1ec9, transparent 24%);
   }
   .campaign::after { background: none; }
@@ -74,8 +82,7 @@
 }
 @media (max-width: 700px) {
   .header, .header:not(.scrolled), .header.scrolled { height: 86px; padding-inline: 6%; }
-  .campaign { --nav-height: 86px; }
-  .campaign-portrait { top: var(--nav-height); }
+  .campaign-portrait { top: 0; }
   .campaign-original { object-position: 50% 0%; }
   .gallery-heading p { max-width: 30rem; }
 }

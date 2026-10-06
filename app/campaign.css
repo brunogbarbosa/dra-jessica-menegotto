@@ -1,8 +1,8 @@
 .header { z-index: 30; border: 0; transition: height .35s, background-color .35s, color .35s; }
-.header:not(.scrolled) { position: absolute; inset: 0 0 auto; height: 104px; color: #f7f3ee; background: linear-gradient(180deg, rgb(18 15 14 / .52), transparent); }
+.header:not(.scrolled) { position: absolute; inset: 0 0 auto; height: 104px; color: #f7f3ee; background: transparent; }
 .header:not(.scrolled) .brand-monogram, .header:not(.scrolled) .brand-type small { color: #dcc3aa; }
-.header:not(.scrolled) .mobile-menu { color: #f7f3ee; border-color: #ffffff66; background: #201b1970; backdrop-filter: blur(12px); }
-.header.scrolled { position: sticky; top: 0; height: 80px; margin-bottom: 0; background: #f7f3eef2; backdrop-filter: blur(18px); }
+.header:not(.scrolled) .mobile-menu { color: #f7f3ee; background: transparent; }
+.header.scrolled { position: sticky; top: 0; height: 80px; margin-bottom: 0; background: transparent; }
 .desktop-nav { display: none; }
 .mobile-menu { display: grid; }
 

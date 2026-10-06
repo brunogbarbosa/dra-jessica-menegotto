@@ -26,6 +26,6 @@ Importe este repositório na Vercel. Framework: **Next.js**. Diretório raiz: **
 
 Dados e contatos estão em `data/site.ts`. Nome, atuação, localização e CRBM 6013 seguem a referência do Instagram fornecida pelo solicitante. O WhatsApp usa exatamente o número informado: **+55 54 9117-9646**. Não foram acrescentados endereço completo, formação, depoimentos ou procedimentos específicos não confirmados.
 
-As 12 fotografias fornecidas foram convertidas para WebP sem retoques. A imagem do hero começa abaixo da navegação. No desktop, máscara e gradiente fazem a transição entre texto e fotografia; o rosto mantém as cores naturais. A composição mobile usa regras próprias. A galeria preserva os originais e suporta comparativos lado a lado e empilhados.
+As 12 fotografias fornecidas foram convertidas para WebP sem retoques. O fundo e a fotografia do hero começam no topo da página, atrás da navegação transparente, sem recuo, faixa ou overlay exclusivo para o nav. No desktop, máscara e gradiente fazem a transição entre texto e fotografia; o rosto mantém as cores naturais. O conteúdo do hero conserva espaço abaixo da navegação, e a composição mobile usa regras próprias. A galeria preserva os originais e suporta comparativos lado a lado e empilhados.
 
 O favicon está em `app/icon.svg`. Nenhuma imagem OG foi criada ou incluída.
